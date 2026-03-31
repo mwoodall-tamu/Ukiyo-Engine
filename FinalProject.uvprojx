@@ -385,9 +385,14 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Project.s</FileName>
+              <FileName>main.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Project.s</FilePath>
+              <FilePath>.\main.s</FilePath>
+            </File>
+            <File>
+              <FileName>itm.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\itm.s</FilePath>
             </File>
           </Files>
         </Group>
