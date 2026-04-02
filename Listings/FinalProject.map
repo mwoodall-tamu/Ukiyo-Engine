@@ -25,6 +25,7 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
+    Removing motor.o(.text), (464 bytes).
     Removing system_stm32f4xx.o(.text), (0 bytes).
     Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (302 bytes).
@@ -33,7 +34,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
     Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
 
-7 unused section(s) (total 346 bytes) removed from the image.
+8 unused section(s) (total 810 bytes) removed from the image.
 
 ==============================================================================
 
@@ -48,6 +49,7 @@ Image Symbol Table
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     itm.s                                    0x00000000   Number         0  itm.o ABSOLUTE
     main.s                                   0x00000000   Number         0  main.o ABSOLUTE
+    motor.s                                  0x00000000   Number         0  motor.o ABSOLUTE
     system_stm32f4xx.c                       0x00000000   Number         0  system_stm32f4xx.o ABSOLUTE
     RESET                                    0x08000000   Section      404  startup_stm32f401xe.o(RESET)
     $v0                                      0x08000194   Number         0  main.o(.text)
@@ -164,13 +166,13 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000194   Data   RO           13    RESET               startup_stm32f401xe.o
+    0x08000000   0x08000000   0x00000194   Data   RO           17    RESET               startup_stm32f401xe.o
     0x08000194   0x08000194   0x00000010   Code   RO            1    .text               main.o
     0x080001a4   0x080001a4   0x00000144   Code   RO            7    .text               itm.o
-    0x080002e8   0x080002e8   0x00000040   Code   RO           14  * .text               startup_stm32f401xe.o
-    0x08000328   0x08000328   0x00000006   Code   RO           34    .text               c_w.l(heapauxi.o)
+    0x080002e8   0x080002e8   0x00000040   Code   RO           18  * .text               startup_stm32f401xe.o
+    0x08000328   0x08000328   0x00000006   Code   RO           38    .text               c_w.l(heapauxi.o)
     0x0800032e   0x0800032e   0x00000002   PAD
-    0x08000330   0x08000330   0x00000012   Code   RO           19    .text.SystemInit    system_stm32f4xx.o
+    0x08000330   0x08000330   0x00000012   Code   RO           23    .text.SystemInit    system_stm32f4xx.o
 
 
     Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000344, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
@@ -182,8 +184,8 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000200   Zero   RW           12    HEAP                startup_stm32f401xe.o
-    0x20000200        -       0x00000400   Zero   RW           11    STACK               startup_stm32f401xe.o
+    0x20000000        -       0x00000200   Zero   RW           16    HEAP                startup_stm32f401xe.o
+    0x20000200        -       0x00000400   Zero   RW           15    STACK               startup_stm32f401xe.o
 
 
 ==============================================================================

@@ -1,5 +1,5 @@
 ; ======== ITM/PRINT MODULE ========
-; Description : Used for debug print
+; Desc: Setup and use of ITM for print debug
 ; Date : 3/31/2026
 ; ==================================
 
